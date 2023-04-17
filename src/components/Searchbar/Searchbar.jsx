@@ -13,7 +13,6 @@ import 'react-toastify/dist/ReactToastify.css';
 export class Searchbar extends Component {
   state = {
     query: '',
-    page: 1,
   };
 
   handleSearch = elem => {

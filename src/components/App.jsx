@@ -29,9 +29,10 @@ export default class App extends Component {
         this.setState({
           images: [...images, ...response.hits],
           showBtn: this.state.page < Math.ceil(response.totalHits / 12),
-          isLoading: false,
         });
-      });
+      })
+      .catch(error => console.log(error))
+      .finally(() => this.setState({isLoading: false}));
     }
   }
 

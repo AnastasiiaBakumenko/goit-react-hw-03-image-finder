@@ -23,10 +23,11 @@ export class Modal extends Component {
     };
 
     handleBackdropClick = e => {
-        if(e.currenTarget !== e.target) {
+        if(e.target === e.currentTarget) {
       
             this.props.closeModal();
         };
+        // console.log(e.currentTarget);
     };
 
     render() {
